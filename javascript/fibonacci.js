@@ -1,7 +1,17 @@
 function fibonacci(num) {
-  // type your code here
+if (num < 2) {
+  return num
+}
+let fib = [0,1]
+for (let i = 0; i < num-1; ++i) {
+  const sum = fib[0] + fib[1]
+  fib = [fib[1], sum]
+}
+return fib[1]
 }
 
+function fibonacci2(num) {
+}
 if (require.main === module) {
   // add your own tests in here
   console.log("Expecting: 0");
